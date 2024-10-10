@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1, // Показывать только один слайд за раз
+        slidesPerView: 1, 
         spaceBetween: 16, // Пространство между слайдами
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
             bulletClass: 'swiper-pagination-bullet', // Класс для буллетов
-            bulletActiveClass: 'swiper-pagination-bullet-active', // Активный класс буллета
+            bulletActiveClass: 'swiper-pagination-bullet-active', 
         },
         loop: true, // Бесконечная прокрутка
     });
@@ -21,16 +21,16 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleBtn.addEventListener('click', function() {
         if (isExpanded) {
             hiddenSlides.forEach(slide => {
-                slide.classList.add('hidden'); // Прячем слайды
+                slide.classList.add('hidden'); 
             });
             toggleBtn.innerHTML = `<img class="show_button" src="assets/expand.svg" alt="show_all"> Показать все`;
         } else {
             hiddenSlides.forEach(slide => {
-                slide.classList.remove('hidden'); // Показываем слайды
+                slide.classList.remove('hidden'); 
             });
             toggleBtn.innerHTML = `<img class="collabse_button" src="assets/collapse.svg" alt="hide_all"> Скрыть`; // Меняем иконку на collapse
         }
-        swiper.update(); // Обновляем Swiper после изменения видимости слайдов
+        swiper.update(); 
         isExpanded = !isExpanded;
     });
 });
