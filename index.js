@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1, // Показывать только один слайд за раз
+        slidesPerView: "auto", // Показывать только один слайд за раз
         spaceBetween: 16, // Пространство между слайдами
         pagination: {
             el: '.swiper-pagination',
